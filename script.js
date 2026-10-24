@@ -23,3 +23,11 @@ document.addEventListener("keydown", function (event) {
     menuButton.focus();
   }
 });
+
+document.addEventListener("click", function (event) {
+  if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
+    menu.classList.remove("open");
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Open menu");
+  }
+});
