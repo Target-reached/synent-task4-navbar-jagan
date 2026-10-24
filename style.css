@@ -181,3 +181,6 @@ textarea:focus {
 }
 
 nav a[aria-current="location"] { font-weight: 700; text-decoration: underline; text-underline-offset: 5px; }
+
+.menu-button:focus-visible, nav a:focus-visible, .logo:focus-visible { outline: 3px solid #2856d9; outline-offset: 4px; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
