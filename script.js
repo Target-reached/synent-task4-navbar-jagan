@@ -9,6 +9,8 @@ menuButton.addEventListener("click", function() {
 const links = menu.querySelectorAll("a");
 for (const link of links) {
   link.addEventListener("click", function() {
+    for (const other of links) other.removeAttribute("aria-current");
+    link.setAttribute("aria-current", "location");
     menu.classList.remove("open");
     menuButton.setAttribute("aria-expanded", "false");
     menuButton.setAttribute("aria-label", "Open menu");
