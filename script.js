@@ -14,3 +14,12 @@ for (const link of links) {
     menuButton.setAttribute("aria-label", "Open menu");
   });
 }
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape" && menu.classList.contains("open")) {
+    menu.classList.remove("open");
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Open menu");
+    menuButton.focus();
+  }
+});
